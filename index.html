@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style/layout.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/curPage.js"></script>
+	<script>
+
+	$(document).ready(function(){
+		 //限制字符个数
+		$(".firstTit a").each
+		(
+			function(){
+				 var maxwidth=25;
+				 if($(this).text().length>maxwidth)
+				 {
+					 $(this).text($(this).text().substring(0,maxwidth));
+					 $(this).html($(this).html()+'…');
+				 }
+			 }
+		 );
+		//内容简介<250个字
+		$(".contentSctn").each
+		(
+			function(){
+				 var maxwidth=250;
+				 if($(this).text().length>maxwidth)
+				 {
+					 $(this).text($(this).text().substring(0,maxwidth));
+					 $(this).html($(this).html()+'…');
+				 }
+			 }
+		 );
+		//获取几天前发布时间
+		var $time = $(".time");
+		var d = new Date();
+		var seconds = d.getTime();
+		var beforeTime = '1417101000000';
+						 // 1417508000000
+
+		var timeGap =parseInt((seconds - beforeTime)/1000);  //先转为秒
+		
+		if(timeGap < 3600 )                    //一小时内3600
+		{
+			$time.html("一小时内"+timeGap);
+		}
+		else if( timeGap < 86400)    //一天内   86400
+		{
+			$time.html("一天内"+timeGap);
+		}
+		else if(timeGap > 86400)           //大于1天
+		{
+			var days = parseInt(timeGap/60/60/24);
+			$time.html(days+"days ago");
+		}
+
+	});
+
+	</script>
+</head>
+<body>
+	<div class="contain">
+		<div class="containL">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Blog</a></li>
+			</ul>
+		</div>
+		<div class="containR">
+			<section class="articleDiv">
+				<div class="articleImg">
+					<img src="images/layout_r2_c2.png" alt="">
+				</div>
+				<div class="articleCt">
+					<p class="firstTit"><a href="#">A body on the beachA body on the beach</a><i>by Moutain Observances</i></p>
+					<p class="SecTit"><a href="#">United Nations</a></p>
+					<p class="content"><span class="time">8 horus ago-</span><span class="contentSctn">VariousIn media production and publishing, content is information and experiences that provides value for an end-user/audience in specific contexts. Content isVariousIn media production and publishing, content is information and experiences that provides value for an end-user/audience in specific contexts. Content isVariousIn media production and publishing, content is information and experiences that provides value for an end-user/audience in specific contexts. Content isVariousIn media production and publishing, content is information and experiences that provides value for an end-user/audience in specific contexts. Content is</span></p>
+					<p class="commet">
+						<span><img src="images/commet.png" alt=""></span>
+						<span><a href="#">1</a></span>
+					</p>
+				</div>
+			</section>
+
+			<section class="articleDiv">
+				<div class="articleImg">
+					<img src="images/layout_r2_c2.png" alt="">
+				</div>
+				<div class="articleCt">
+					<p class="firstTit"><a href="#">A body on the beachA body on the beach</a><i>by Moutain Observances</i></p>
+					<p class="SecTit"><a href="#">United Nations</a></p>
+					<p class="content"><span class="time">8 horus ago-</span><span class="contentSctn">VariousIn media production and publishing, content is information and experiences that provides value for an end-user/audience in specific contexts. Content isVariousIn media production and publishing, content is information and experiences that provides value for an end-user/audience in specific contexts. Content isVariousIn media production and publishing, content is information and experiences that provides value for an end-user/audience in specific contexts. Content isVariousIn media production and publishing, content is information and experiences that provides value for an end-user/audience in specific contexts. Content is</span></p>
+					<p class="commet">
+						<span><img src="images/commet.png" alt=""></span>
+						<span><a href="#">1</a></span>
+					</p>
+				</div>
+			</section>
+			</section>
+			<div class="blank"></div>
+			<div class="page" id="page">
+				<a href="#" id="one1" onclick="addClass('one',1,5)"><<</a>
+				<a href="#" id="one2" class="curPage" onclick="addClass('one',2,5)">1</a>
+				<a href="#" id="one3" onclick="addClass('one',3,5)">2</a>
+				<a href="#" id="one4" onclick="addClass('one',4,5)">3</a>
+				<a href="#" id="one5" onclick="addClass('one',5,5)">>></a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

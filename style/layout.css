@@ -1,0 +1,137 @@
+*
+{
+	padding: 0;
+	margin: 0;	
+}
+html 
+{
+    font-family: 微软雅黑;
+    font-size: 14px;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video
+{
+	border: 0 none;
+    margin: 0;
+    padding: 0;
+}
+a
+{
+    text-decoration: none;
+    color: #000;
+}
+.containL
+{
+    width: 20%;
+    height: 200px;
+    float: left;
+    padding: 10px 2%;
+}
+.containL ul li
+{
+    line-height: 40px;
+    list-style: none;
+    font-size: 18px;
+}
+.containL ul li a
+{
+    color: #4299D8;
+}
+.containR
+{
+    width: 71%;
+    float: left;
+    margin-right: 5%;
+}
+.containR .articleDiv
+{
+    margin: 30px auto;
+    height: 230px;
+    padding-top: 10px;
+    padding-left: 30px;
+    border-top: 1px solid #CCC;
+}
+.containR .articleDiv .articleImg
+{
+    width: 30%;
+    height: 230px;
+    line-height: 230px;
+    float: left;
+    text-align: center;
+}
+.containR .articleDiv .articleImg img
+{
+    vertical-align: middle;
+    box-shadow:0px  0px 1px 0px #000;
+    -moz-box-shadow:0px  0px 1px 0px #000;  /*兼容老版火狐*/
+    padding: 5px;
+    border-radius: 3px;
+}
+.containR .articleDiv .articleCt
+{
+    width: 60%;
+    float: right;
+    margin-top: 20px;
+}
+.containR .firstTit 
+{
+    line-height: 30px;
+    font-size: 16px;
+}
+.containR .firstTit a
+{
+    color: #0BBB63;
+}
+
+.containR .firstTit i
+{
+    color: #CCC;
+}
+.containR .SecTit a
+{
+    color: #06F2AE;
+    line-height: 30px;
+}
+.containR .commet span
+{
+    line-height: 40px;
+}
+
+.containR .commet span a
+{
+    color: #06F2AE; 
+}
+.containR .blank
+{
+    height: 1px;
+    background: #CCC;
+    margin-bottom: 30px;
+}
+.containR .page
+{
+    width: 165px;
+    height: 30px;
+    float: right;
+    margin-bottom: 30px;
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+    border-radius: 2px; 
+}
+.containR .page a
+{
+    display: block;
+    width:  32px;
+    height: 30px;
+    float: left;
+    text-align: center;
+    line-height: 30px;
+    color: #428BCA;
+    border-left: 1px solid #CCC;
+}
+
+.contain .page .curPage
+{
+    background: #428BCA;
+    color: #FFF;
+}
